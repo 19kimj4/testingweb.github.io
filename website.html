@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<head>
+	<title></title>
+	<style>
+		
+		ul{
+			list-style-type: none;
+			margin:0;
+			padding:0;
+			position: fixed;
+			width: 100%;
+			z-index: 1;
+			overflow: auto;		
+			background-color: #C3C8CE;
+		}
+		li{
+			float: left;
+		}
+
+		li a{
+			display: block;
+			color: #5B5B5E;
+			text-align: center;
+			padding:10px 16px;
+			text-decoration: none;
+		}
+		li a:hover{
+			background-color: #CFD4D8;
+		}
+
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-gap:30px;
+			max-width: 960px;
+			margin: 0 auto 30px;
+		
+		}
+
+		.gallery {
+			height: 200px;
+			width: 100%;
+			object-fit: cover;
+		}
+
+
+
+		article {
+			position: relative;
+		}
+
+		
+		.title {
+			position:absolute;
+			bottom: 0;
+			transform: translate(0, 8px);
+			width: 100%;
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		h6 {
+			color: white;
+		}
+
+		
+	</style>
+</head>
+<body style="background-color: #EEE8DF;">
+<ul>
+<li><a href="website.html">Home</a></li>
+<li><a href="link1.html">Gallery</a></li>
+<li><a href="#">Popular Apps</a></li>
+<li><a href="#">About</a></li>
+</ul>
+
+<section>
+<img class="mySlides" src="images\socialmedia2.jpg" style="width:100%; height: 450px;">
+<img class="mySlides" src="images\socialmedia3.jpg" style="width:100%; height: 450px;">
+<img class="mySlides" src="images\socialmedia4.jpg" style="width:100%; height: 450px;">
+</section>
+
+<script>
+var myIndex = 0;
+slide();
+
+function slide() {
+	var i;
+	var x = document.getElementsByClassName("mySlides");
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+
+	myIndex++;
+	if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+	setTimeout(slide, 3000);
+
+}
+</script>
+
+<section class="w3-container w3-center">
+<h2 class="w3-wide"	style="padding-top: 40px;">Social Media</h2>
+<p class="w3-opacity" style="padding-bottom: 40px;"><i>we love chatting</i></p>
+
+</section>
+<section class="cards" style="padding-bottom: 40px;">
+<article>
+	<img src="images\statsimage4.png" class="gallery">
+	<h6 class="title">stats - usage time</h6>
+</article>
+<article>
+	<img src="images\statimage1.jpg" class="gallery">
+	<h6 class="title">stats - number of users</h6>
+</article>
+<article>
+	<img src="images\statimage2.png" class="gallery">
+	<h6 class="title">stats - active monthly users</h6>
+</article>
+
+</section>
+<div style="height: 600px"></div>
+
+
+</body>
+</html>
